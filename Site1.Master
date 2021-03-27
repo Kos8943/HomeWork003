@@ -1,0 +1,150 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HomeWork003.Site1" %>
+
+
+<%@ Register Src="~/ucLeft.ascx" TagPrefix="uc1" TagName="ucLeft" %>
+<%@ Register Src="~/ucFooter.ascx" TagPrefix="uc1" TagName="ucFooter" %>
+<%@ Register Src="~/ucHeader1.ascx" TagPrefix="uc1" TagName="ucHeader1" %>
+
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        html, body {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mailArea {
+            height: 100%;
+        }
+
+        .titleArea {
+            display: flex;
+            height: 12%;
+        }
+
+        .nameArea {
+            padding: 1%;
+            height: 100%;
+            width: 18%;
+            background-color: rgb(52, 58, 70);
+            text-align: center;
+            position: relative;
+        }
+
+        .namePostion {
+            position: absolute;
+            bottom: 33%;
+            left: 50%;
+            transform: translate(-50%);
+            font-size: 20px;
+        }
+
+        .tableNameArea {
+            padding: 1%;
+            width: 82%;
+            height: 100%;
+            background-color: rgb(254,254,254);
+            position: relative;
+        }
+
+        .tableNamePosition {
+            position: absolute;
+            bottom: 33%;
+            left: 2%;
+            font-size: 20px;
+        }
+
+        .secondArea {
+            display: flex;
+            width: 100%;
+            height: 75%;
+        }
+
+        .title {
+            padding: 1.5% 1% 1% 1.1%;
+            width: 18%;
+            background-color: rgb(43,50,60);
+            position: relative;
+        }
+
+        .tableArea {
+            padding: 1.5% 1% 1% 1.5%;
+            width: 82%;
+            position: relative;
+            background-color: rgb(243,244,248);
+        }
+
+
+        .tableList {
+            text-align: center;
+            margin-bottom: 8%;
+            font-size: 22px;
+            border-bottom: 3px solid rgb(41,55,65);
+        }
+
+            .tableList a {
+                text-decoration: none;
+                color: rgb(238,238,238);
+            }
+
+        .tableContent {
+            /*border: 1px solid rgb(255,255,226);*/
+            height: 88%;
+            border-radius: 2px;
+            background-color: rgb(254,254,254)
+        }
+
+
+        .footerArea {
+            height: 13%;
+            width: 100%;
+        }
+
+        .footerContent {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(90,102,103);
+        }
+
+        .footerFirstArea {
+            padding: 0 20% 0 5%;
+            width: 100%;
+            background-color: rgb(90,102,103);
+            color: rgb(238,238,238);
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form class="mailArea" id="form1" runat="server">
+        <div class="titleArea">
+            <uc1:ucHeader1 runat="server" ID="ucHeader1" />
+        </div>
+
+        <div class="secondArea">
+
+            <uc1:ucLeft runat="server" id="ucLeft" />
+
+            <div class="tableArea">
+                <div class="tableContent" style="overflow: scroll;">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+        <uc1:ucFooter runat="server" id="ucFooter" />
+    </form>
+</body>
+</html>
