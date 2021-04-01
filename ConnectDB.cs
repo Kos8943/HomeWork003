@@ -14,8 +14,8 @@ namespace HomeWork003
         #region 查詢無人機資料表的Method
         public static DataTable ReadDroneDetail()
         {
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@" SELECT * FROM Drone_Detail;";
@@ -75,8 +75,8 @@ namespace HomeWork003
         public static DataTable InsertIntoDroneDetail(string DroneName, string Manufacturer, string WeightLoad, string Status, string StopReason, string Operator)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@"INSERT INTO Drone_Detail
@@ -136,8 +136,8 @@ namespace HomeWork003
         public static DataTable DelectDroneDetail(string ID)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@"DELETE FROM Drone_Detail WHERE DroneDetail_ID = @ID";
@@ -193,8 +193,8 @@ namespace HomeWork003
         public static void UpDateDroneDetail(string Sid, string DroneName, string Manufacturer, string WeightLoad, string Status, string StopReason, string Operator)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
 
             //使用的SQL語法
@@ -258,8 +258,8 @@ namespace HomeWork003
         public static DataTable ReadSingleDroneDetail(string ID)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@" SELECT * FROM Drone_Detail WHERE DroneDetail_ID=@ID;";
@@ -323,8 +323,8 @@ namespace HomeWork003
         public static DataTable ReadDroneBattery()
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@" SELECT * FROM Drone_Battery;";
@@ -385,8 +385,8 @@ namespace HomeWork003
         #region 新增電池資料的Method
         public static DataTable InsertIntoDroneBattery(string BatteryName, string Stutas, string StopReason)
         {
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@"INSERT INTO Drone_Battery
@@ -448,8 +448,8 @@ namespace HomeWork003
         public static DataTable DeleteBattery(string ID)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@"DELETE FROM Drone_Battery WHERE sid = @ID";
@@ -507,8 +507,8 @@ namespace HomeWork003
         #region 修改電池資料表的Method
         public static DataTable UpDateBattery(string Sid, string BatteryName, string Status, string StopReason)
         {
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@"UPDATE Drone_Battery SET battery_Name=@battery_Name, status=@status, stopReason=@stopReason WHERE sid=@sid";
@@ -566,8 +566,8 @@ namespace HomeWork003
         #region 查詢單筆電池資料表的Method
         public static DataTable ReadSingleBattery(string sid)
         {
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@" SELECT * FROM Drone_Battery WHERE sid=@ID;";
@@ -632,8 +632,8 @@ namespace HomeWork003
 
         public static DataTable ReadDroneFixed()
         {
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@" SELECT * FROM Drone_Fix;";
@@ -693,8 +693,8 @@ namespace HomeWork003
         public static DataTable InsertIntoDroneFix(string ItemName, string StopDate, string SendDate, string FixVendor, string StopReason, string FixChange, string Remarks)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@"INSERT INTO Drone_Fix
@@ -754,8 +754,8 @@ namespace HomeWork003
         public static DataTable ReadSingleDroneFix(string sid)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@" SELECT * FROM Drone_Fix WHERE sid=@sid;";
@@ -816,8 +816,8 @@ namespace HomeWork003
         public static void UpDateDroneFix(string Sid, string ItemName, string StopDate, string SendDate, string FixVendor, string StopReason, string FixChange, string Remarks)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
 
             //使用的SQL語法
@@ -883,8 +883,8 @@ namespace HomeWork003
         public static DataTable DelectDroneFix(string sid)
         {
 
-            //建立連線資料庫的字串變數Catalog=Drone的Drone為資料庫名稱
-            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone; Integrated Security=true";
+            //建立連線資料庫的字串變數Catalog=Drone3的Drone為資料庫名稱
+            string connectionString = "Data Source=localhost\\SQLExpress;Initial Catalog=Drone3; Integrated Security=true";
 
             //使用的SQL語法
             string queryString = $@"DELETE FROM Drone_Fix WHERE sid = @sid";
