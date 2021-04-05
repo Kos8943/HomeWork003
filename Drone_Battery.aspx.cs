@@ -15,6 +15,7 @@ namespace HomeWork003
 
             if (!IsPostBack)
             {
+                Header1.title = "電池管理資料表";
                 DataTable dt = ConnectDB.ReadDroneBattery();
                 this.DroneBatteryReater.DataSource = dt;
                 this.DroneBatteryReater.DataBind();

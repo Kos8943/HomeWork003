@@ -14,6 +14,7 @@ namespace HomeWork003
         {
             if (!IsPostBack)
             {
+                Header1.title = "無人機資料表";
                 DataTable dt = ConnectDB.ReadDroneDetail();
                 this.DroneDetailRepeater.DataSource = dt;
                 this.DroneDetailRepeater.DataBind();
