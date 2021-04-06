@@ -12,6 +12,7 @@ namespace HomeWork003
         protected void Page_Load(object sender, EventArgs e)
         {
             Header1.title = "";
+
         }
     }
 }
